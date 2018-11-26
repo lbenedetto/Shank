@@ -6,7 +6,7 @@ class TestPresenter(var text: String) : ShankPresenter<TestActivity, TestContrac
     private lateinit var view: TestContract.View
 
     override fun onReady() {
-        view = getView()
-        getView().setText(text)
+        view = getView()!!
+        view.setText(text)
     }
 }

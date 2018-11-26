@@ -1,7 +1,6 @@
 package com.lbenedetto.shank
 
 interface Constructable<ViewClass> {
-    fun readyForPresenter()
-    fun getView() : ViewClass
-
+    fun setView(view: ViewClass)
+    fun getView(): ViewClass?
 }

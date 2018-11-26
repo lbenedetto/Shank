@@ -50,7 +50,7 @@ abstract class ShankPresenter<ActivityClass, ViewClass> {
         onReady()
     }
 
-    fun getView(): ViewClass {
+    fun getView(): ViewClass? {
         return constructable.getView()
     }
 
