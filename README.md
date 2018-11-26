@@ -59,6 +59,6 @@ repositories {
 Add dependency
 ```gradle
 dependencies {
-    implementation 'com.github.lbenedetto:Shank:1.1.1'
+    implementation 'com.github.lbenedetto:Shank:1.1.2'
 }
 ```
