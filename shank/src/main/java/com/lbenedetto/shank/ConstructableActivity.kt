@@ -25,6 +25,7 @@ abstract class ConstructableActivity<ViewClass> : AppCompatActivity(), Construct
 
     override fun onDestroy() {
         super.onDestroy()
-        ShankPresenter.unregister(id)
+        if (isFinishing)
+            ShankPresenter.unregister(id)
     }
 }

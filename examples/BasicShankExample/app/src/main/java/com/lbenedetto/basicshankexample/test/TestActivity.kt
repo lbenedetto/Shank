@@ -11,5 +11,4 @@ class TestActivity : ConstructableActivity<TestContract.View>() {
         setTheme(R.style.AppTheme)
         setView(TestView(this))
     }
-
 }
