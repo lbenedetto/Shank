@@ -1,1 +1,1 @@
-include ':app', ':shank'
+include ':shank'

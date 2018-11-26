@@ -1,20 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-ext {
-    PUBLISH_GROUP_ID = 'com.lbenedetto.shank'
-    PUBLISH_ARTIFACT_ID = 'shank'
-    PUBLISH_VERSION = '1.0'
-}
-
 android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 3
+        minSdkVersion 1
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
     }
 
     buildTypes {
