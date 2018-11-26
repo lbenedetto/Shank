@@ -8,16 +8,19 @@ See the example project to see how to implement.
 
 A stub of a presenter would look like this. You can pass whatever objects you want your activity to use into the presenters constructor
 
-    class MyPresenter() : ShankPresenter<TestActivity, MyContract.View>(), MyContract.Presenter {
-        private lateinit var view: TestContract.View
+```Kotlin
+class MyPresenter() : ShankPresenter<TestActivity, MyContract.View>(), MyContract.Presenter {
+    private lateinit var view: TestContract.View
 
-        override fun onReady() {
-            view = getView()!!
-        }
+    override fun onReady() {
+        view = getView()!!
     }
+}
+```
     
 A stub of an Activity would look like this
 
+```Kotlin
 class MyActivity : ConstructableActivity<MyContract.View>() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +31,11 @@ class MyActivity : ConstructableActivity<MyContract.View>() {
     }
     
 }
+```
 
 Your view doesn't need to know anything about this library, just treat it like normal
 
 And you would start your Activity/Presenter thing by doing  
-    MyPresenter().start(context, MyActivity::class.java)
+```Kotlin
+MyPresenter().start(context, MyActivity::class.java)
+```
