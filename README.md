@@ -1,8 +1,14 @@
 # Shank
 Sure, a Dagger would be nice, but a Shank will do the trick
 
-Why learn complicated new things when you can just use constructors like you're used to?
+Shank is a library that allows you to pass your arguments directly to your presenter, which it can then use to set up your view in your activity.
+
+Its as simple as extending the provided ShankPresenter and ConstructableActivity, and using this to start your activity instead of doing it the usual way.
+MyPresenter(myObject).start(context, MyActivity::class.java)
+
 This library requires that you use MVP pattern, and even sort of enforces some aspects of it.
+
+Its called Shank because it serves a similar purpose to Dagger, but its probably not as good, and kinda seems like something someone made out of some garbage they found.
 
 See the example project to see how to implement.
 
