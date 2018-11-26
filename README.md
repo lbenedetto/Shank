@@ -39,3 +39,20 @@ And you would start your Activity/Presenter thing by doing
 ```Kotlin
 MyPresenter().start(context, MyActivity::class.java)
 ```
+
+
+# Installation
+Add jitpack to your root build.gradle at the end of repositories:
+```gradle
+repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+```gradle
+dependencies {
+    implementation 'com.github.lbenedetto:Shank:1.1.1'
+}
+```
