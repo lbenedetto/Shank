@@ -5,14 +5,14 @@ import android.content.Intent
 import android.util.SparseArray
 
 
-abstract class ShankPresenter<ActivityClass, ViewClass> {
+abstract class ShankPresenter<ViewClass> {
 
     companion object {
-        private val instances = SparseArray<ShankPresenter<*, *>>()
+        private val instances = SparseArray<ShankPresenter<*>>()
         private var globalIDSource: Int = 0
 
         @Synchronized
-        fun register(id: Int, presenter: ShankPresenter<*, *>) {
+        fun register(id: Int, presenter: ShankPresenter<*>) {
             instances.put(id, presenter)
         }
 
@@ -32,15 +32,13 @@ abstract class ShankPresenter<ActivityClass, ViewClass> {
         }
     }
 
-
     private lateinit var constructable: Constructable<ViewClass>
     private var id = getNextID()
     init {
         ShankPresenter.register(id, this)
     }
 
-    fun start(context: Context, target: Class<ActivityClass>){
-        val intent = Intent(context, target)
+    fun start(context: Context, intent: Intent){
         intent.putExtra("AppCompatActivityPresenter_ID", id)
         context.startActivity(intent)
     }
